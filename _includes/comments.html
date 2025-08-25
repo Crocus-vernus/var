@@ -1,0 +1,37 @@
+{% if site.staticman and site.staticman.path %}
+<form method="POST" action="https://DIN-STATICMAN-URL/v3/entry/github/DITT_ANV/DITT_REPO/{{ site.staticman.branch }}/comments">
+<input type="hidden" name="options[slug]" value="{{ page.slug }}">
+
+
+<p>
+<label>Namn<br>
+<input name="fields[name]" required>
+</label>
+</p>
+<p>
+<label>E‑post<br>
+<input type="email" name="fields[email]" required>
+</label>
+</p>
+<p>
+<label>Kommentar<br>
+<textarea name="fields[message]" rows="5" required></textarea>
+</label>
+</p>
+<button type="submit">Skicka</button>
+</form>
+
+
+<div>
+{% assign slug = page.slug %}
+{% if site.data.comments[slug] %}
+{% for c in site.data.comments[slug] %}
+<p><strong>{{ c[1].name }}</strong><br>{{ c[1].message }}</p>
+{% endfor %}
+{% else %}
+<p>Inga kommentarer ännu.</p>
+{% endif %}
+</div>
+{% else %}
+<p><em>Kommentarer avstängda tills Staticman är aktiverat.</em></p>
+{% endif %}
