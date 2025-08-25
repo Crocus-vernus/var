@@ -1,0 +1,35 @@
+# Grundinfo
+title: "Min blogg"
+description: "En plats för mina tankar"
+
+
+# Viktigt för länkar
+url: "https://Crocus-vernus.github.io"
+baseurl: "/var" # tomt ("") om repo heter Crocus-vernus.github.io
+
+
+# Tema & plugins som stöds av GitHub Pages
+theme: minima
+plugins:
+- jekyll-feed
+- jekyll-seo-tag
+
+
+# Styr om sajten ska vara dold bakom "Kommer snart"
+coming_soon: true # ändra till false när du lanserar
+
+
+# Språk (påverkar bl.a. datumformat i vissa teman)
+lang: sv-SE
+
+
+# Bloggstruktur
+collections:
+posts:
+output: true
+
+
+# Staticman – mapp där kommentarer hamnar
+staticman:
+branch: "main" # eller "master" om din default-branch heter så
+path: "_data/comments"
