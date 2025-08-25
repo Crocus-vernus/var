@@ -1,0 +1,11 @@
+<header>
+<h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+<nav>
+<a href="{{ '/' | relative_url }}">Hem</a>
+<a href="{{ '/categories/' | relative_url }}">Kategorier</a>
+<a href="{{ '/tags/' | relative_url }}">Taggar</a>
+<a href="{{ '/about/' | relative_url }}">Om</a>
+</nav>
+{% include search.html %}
+<hr>
+</header>
