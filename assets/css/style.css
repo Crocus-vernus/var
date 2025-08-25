@@ -1,0 +1,4 @@
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+.site { max-width: 860px; margin: 0 auto; padding: 1.25rem; }
+nav a { margin-right: .75rem; }
+input, textarea { width: 100%; max-width: 100%; }
