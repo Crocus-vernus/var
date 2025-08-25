@@ -1,0 +1,25 @@
+---
+---
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+
+{%- if site.coming_soon and page.url != '/coming-soon.html' -%}
+<!-- Håll allt bakom "Kommer snart" -->
+<meta http-equiv="refresh" content="0; url={{ '/coming-soon.html' | relative_url }}">
+<meta name="robots" content="noindex,nofollow">
+{%- endif -%}
+</head>
+<body>
+<div class="site">
+{% include header.html %}
+<main>{{ content }}</main>
+{% include footer.html %}
+</div>
+</body>
+</html>
