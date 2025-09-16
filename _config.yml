@@ -1,10 +1,10 @@
 # Grundinfo
 title: "vår."
-description: "En plats för mina tankar"
+description: "Ett utrymme för vår diskussion"
 
 
 # Viktigt för länkar
-url: "https://Crocus-vernus.github.io"
+url: "https://crocus-vernus.github.io/var/"
 baseurl: "/var" # tomt ("") om repo heter Crocus-vernus.github.io
 
 
