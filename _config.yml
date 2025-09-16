@@ -28,8 +28,3 @@ collections:
 posts:
 output: true
 
-
-# Staticman – mapp där kommentarer hamnar
-staticman:
-branch: "main" # eller "master" om din default-branch heter så
-path: "_data/comments"
