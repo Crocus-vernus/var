@@ -37,13 +37,19 @@ a:hover {
 }
 
 /* Kommentarer */
-/* Begränsa Giscus-kommentarer */
 .giscus {
-  max-width: 700px;       /* Justera bredden efter önskemål */
-  margin: 40px auto 0;    /* Centrerar fältet och lägger lite space ovanför */
-  padding: 0 15px;        /* Lite luft inuti */
-  margin-top: 40px;
+  max-width: 700px;       /* samma som tidigare */
+  margin: 40px auto 0;    /* centrerar fältet */
+  padding: 0 15px;
+  overflow: hidden;       /* säkerställer att inget sticker ut */
+  box-sizing: border-box;
 }
+
+.giscus iframe {
+  width: 100% !important; /* tvingar iframe att följa .giscus bredd */
+  min-width: 0;           /* undviker att iframe bryter layouten */
+}
+
 
 /* Footer och header mindre trångt */
 header .container, footer .container {
