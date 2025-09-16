@@ -1,53 +1,60 @@
-/* Grundtypsnitt och bakgrund */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  background: #f7f7f7;
-  color: #333;
-}
-
-/* Container */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
+/* --- Bloggkort på startsidan --- */
+.post-summary {
+  background: white;
+  border-radius: 8px;
   padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.post-summary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Header */
-header {
-  background: #2c3e50;
-  color: white;
-  padding: 20px 0;
-}
-header h1 a {
-  color: white;
-  text-decoration: none;
-}
-header nav a {
-  color: white;
-  margin-left: 15px;
-  text-decoration: none;
+/* Titel på inläggskort */
+.post-summary h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.6em;
+  color: #2c3e50;
 }
 
-/* Footer */
-footer {
-  background: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
+/* Meta (datum, kategori, taggar) på kort */
+.post-summary .meta {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Länkar */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Kommentarer */
+.giscus {
   margin-top: 40px;
 }
 
-/* Post */
-.post h2 {
-  margin-top: 0;
+/* Footer och header mindre trångt */
+header .container, footer .container {
+  max-width: 900px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
-.post .meta {
-  color: #666;
-  font-size: 0.9em;
-  margin-bottom: 20px;
-}
-.post .content {
-  margin-bottom: 40px;
+
+/* Responsiv text */
+@media (max-width: 600px) {
+  header nav a {
+    display: block;
+    margin: 5px 0;
+  }
+  .container {
+    padding: 15px;
+  }
 }
