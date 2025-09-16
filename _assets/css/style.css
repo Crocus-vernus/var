@@ -1,13 +1,16 @@
-/* --- Grundtypsnitt och färger --- */
+/* --- Importera Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Georgia&display=swap');
+
+/* --- Grundtypsnitt --- */
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", serif;
   line-height: 1.7;
-  color: #2c3e50;          /* mörkblå/grå text */
-  background-color: #f5f5f5; /* ljus bakgrund */
+  color: #2c2c2c;
+  background-color: #d6c1ff; /* lila bakgrund */
   margin: 0;
 }
 
-/* --- Container --- */
+/* --- Container för inlägg --- */
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -17,17 +20,22 @@ body {
 
 /* --- Header --- */
 header {
-  background-color: #2c3e50;
-  color: white;
+  background-color: #7b4dcc; /* mörklila */
+  color: #fff176; /* gul text */
   padding: 20px 0;
   margin-bottom: 40px;
 }
+header h1 {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  font-size: 2.5em;
+}
 header h1 a {
-  color: white;
+  color: #fff176; /* gul */
   text-decoration: none;
 }
 header nav a {
-  color: white;
+  color: #fff176;
   margin-left: 15px;
   text-decoration: none;
 }
@@ -37,36 +45,31 @@ header nav a:hover {
 
 /* --- Footer --- */
 footer {
-  background-color: #2c3e50;
-  color: white;
+  background-color: #7b4dcc;
+  color: #fff176;
   text-align: center;
   padding: 10px 0;
   margin-top: 40px;
 }
 
-/* --- Inlägg och kort --- */
+/* --- Inlägg --- */
 .post, .post-summary {
-  background: white;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.post-summary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: #ffffff; /* vit bakgrund */
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Titel på inlägg */
+/* --- Titel i inlägg --- */
 .post h2, .post-summary h2 {
   margin-top: 0;
   margin-bottom: 10px;
-  font-size: 1.6em;
-  color: #34495e;
+  font-size: 1.8em;
+  color: #7b4dcc; /* mörklila */
 }
 
-/* Meta (datum, kategori, taggar) */
+/* --- Meta (datum, kategori, taggar) --- */
 .post .meta, .post-summary .meta {
   font-size: 0.9em;
   color: #666;
@@ -75,10 +78,10 @@ footer {
 
 /* --- Länkar --- */
 a {
-  color: #3498db;
-  text-decoration: none;
+  color: #7b4dcc;
 }
 a:hover {
+  color: #fff176;
   text-decoration: underline;
 }
 
@@ -105,9 +108,3 @@ a:hover {
     padding: 15px;
   }
 }
-
-/* --- Eventuellt extra spacing för content --- */
-.post .content {
-  margin-bottom: 40px;
-}
-
