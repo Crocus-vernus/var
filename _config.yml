@@ -16,7 +16,7 @@ plugins:
 
 
 # Styr om sajten ska vara dold bakom "Kommer snart"
-coming_soon: true # ändra till false när du lanserar
+coming_soon: false # ändra till false när du lanserar
 
 
 # Språk (påverkar bl.a. datumformat i vissa teman)
