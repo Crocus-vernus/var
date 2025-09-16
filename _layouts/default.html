@@ -1,25 +1,30 @@
----
----
-<!doctype html>
+<!DOCTYPE html>
 <html lang="sv">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-{% seo %}
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
-
-{%- if site.coming_soon and page.url != '/coming-soon.html' -%}
-<!-- Håll allt bakom "Kommer snart" -->
-<meta http-equiv="refresh" content="0; url={{ '/coming-soon.html' | relative_url }}">
-<meta name="robots" content="noindex,nofollow">
-{%- endif -%}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-<div class="site">
-{% include header.html %}
-<main>{{ content }}</main>
-{% include footer.html %}
-</div>
+  <header>
+    <div class="container">
+      <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      <nav>
+        <a href="{{ '/' | relative_url }}">Hem</a>
+        <a href="{{ '/about' | relative_url }}">Om</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+    </div>
+  </footer>
 </body>
 </html>
