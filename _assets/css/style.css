@@ -37,7 +37,11 @@ a:hover {
 }
 
 /* Kommentarer */
+/* Begränsa Giscus-kommentarer */
 .giscus {
+  max-width: 700px;       /* Justera bredden efter önskemål */
+  margin: 40px auto 0;    /* Centrerar fältet och lägger lite space ovanför */
+  padding: 0 15px;        /* Lite luft inuti */
   margin-top: 40px;
 }
 
