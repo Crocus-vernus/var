@@ -1,5 +1,51 @@
-/* --- Bloggkort på startsidan --- */
-.post-summary {
+/* --- Grundtypsnitt och färger --- */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  color: #2c3e50;          /* mörkblå/grå text */
+  background-color: #f5f5f5; /* ljus bakgrund */
+  margin: 0;
+}
+
+/* --- Container --- */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* --- Header --- */
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  margin-bottom: 40px;
+}
+header h1 a {
+  color: white;
+  text-decoration: none;
+}
+header nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 40px;
+}
+
+/* --- Inlägg och kort --- */
+.post, .post-summary {
   background: white;
   border-radius: 8px;
   padding: 20px;
@@ -12,22 +58,22 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Titel på inläggskort */
-.post-summary h2 {
+/* Titel på inlägg */
+.post h2, .post-summary h2 {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 1.6em;
-  color: #2c3e50;
+  color: #34495e;
 }
 
-/* Meta (datum, kategori, taggar) på kort */
-.post-summary .meta {
+/* Meta (datum, kategori, taggar) */
+.post .meta, .post-summary .meta {
   font-size: 0.9em;
   color: #666;
   margin-bottom: 15px;
 }
 
-/* Länkar */
+/* --- Länkar --- */
 a {
   color: #3498db;
   text-decoration: none;
@@ -36,29 +82,20 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Kommentarer */
+/* --- Kommentarer: Giscus --- */
 .giscus {
-  max-width: 700px;       /* samma som tidigare */
-  margin: 40px auto 0;    /* centrerar fältet */
+  max-width: 700px;
+  margin: 40px auto 0;
   padding: 0 15px;
-  overflow: hidden;       /* säkerställer att inget sticker ut */
+  overflow: hidden;
   box-sizing: border-box;
 }
-
 .giscus iframe {
-  width: 100% !important; /* tvingar iframe att följa .giscus bredd */
-  min-width: 0;           /* undviker att iframe bryter layouten */
+  width: 100% !important;
+  min-width: 0;
 }
 
-
-/* Footer och header mindre trångt */
-header .container, footer .container {
-  max-width: 900px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-/* Responsiv text */
+/* --- Responsivt --- */
 @media (max-width: 600px) {
   header nav a {
     display: block;
@@ -68,3 +105,9 @@ header .container, footer .container {
     padding: 15px;
   }
 }
+
+/* --- Eventuellt extra spacing för content --- */
+.post .content {
+  margin-bottom: 40px;
+}
+
